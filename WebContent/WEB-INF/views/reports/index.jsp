@@ -13,7 +13,7 @@
             <tbody>
                 <tr>
                     <th class="report_name">氏名</th>
-                    <th class="re[prt_date">日付</th>
+                    <th class="report_date">日付</th>
                     <th class="report_title">タイトル</th>
                     <th class="report_action">操作</th>
                 </tr>
@@ -29,7 +29,7 @@
         </table>
 
         <div id="pagination">
-            (全 ${reports_count} 件) <br />
+            （全 ${reports_count} 件）<br />
             <c:forEach var="i" begin="1" end="${((reports_count - 1) / 15) + 1}" step="1">
                 <c:choose>
                     <c:when test="${i == page}">
@@ -42,5 +42,6 @@
             </c:forEach>
         </div>
         <p><a href="<c:url value='/reports/new' />">新規日報の登録</a></p>
+
     </c:param>
 </c:import>
